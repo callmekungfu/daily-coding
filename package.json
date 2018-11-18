@@ -1,0 +1,24 @@
+{
+  "name": "yonglin-daily-coding",
+  "version": "1.0.0",
+  "description": "This is where yonglin commits daily. This is a learning playground.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callmekungfu/daily-coding.git"
+  },
+  "author": "Yong Lin Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/callmekungfu/daily-coding/issues"
+  },
+  "homepage": "https://github.com/callmekungfu/daily-coding#readme",
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
