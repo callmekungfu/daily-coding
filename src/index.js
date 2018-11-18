@@ -1,9 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const _ = require("lodash");
-function greeter(person) {
-    return "Hello, " + person;
+require("./styles/style.css");
+function component() {
+    var element = document.createElement('div');
+    // Lodash, now imported by this script
+    element.innerHTML = _.join(['Hello', 'Yong', 'Lin', 'Wang'], ' ');
+    +element.classList.add('hello');
+    return element;
 }
-let user = _.join(['Yong', 'Lin', 'Wang'], ' ');
-document.body.innerHTML = greeter(user);
+document.body.appendChild(component());
 //# sourceMappingURL=index.js.map

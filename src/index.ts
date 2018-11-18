@@ -1,9 +1,13 @@
 import * as _ from 'lodash';
+import './styles/style.css';
 
-function greeter(person: string) {
-    return "Hello, " + person;
+
+function component() {
+    var element = document.createElement('div');
+    // Lodash, now imported by this script
+    element.innerHTML = _.join(['Hello', 'Yong', 'Lin', 'Wang'], ' '); +
+    element.classList.add('hello');
+    return element;
 }
 
-let user = _.join(['Yong','Lin','Wang'], ' ');
-
-document.body.innerHTML = greeter(user)
+document.body.appendChild(component());
