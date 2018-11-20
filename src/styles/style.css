@@ -6,5 +6,6 @@
   background: pink;
 }
 .test .test-inner {
-  color: white;
+  color: black;
+  font-family: 'comic sans';
 }
