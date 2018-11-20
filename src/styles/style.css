@@ -1,4 +1,10 @@
 .hello {
-    color: red;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  color: red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.test {
+  background: pink;
+}
+.test .test-inner {
+  color: white;
 }
