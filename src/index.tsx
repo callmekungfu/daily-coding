@@ -5,6 +5,8 @@ import {
     Hello,
 } from './components/hello';
 
+import { Link } from './components/Link';
+
 import './styles/style.css';
 
 class Main extends React.Component<{}, {count: number}> {
@@ -13,13 +15,16 @@ class Main extends React.Component<{}, {count: number}> {
     };
     render() {
         return (
-            <Hello
-                label="TypeScript"
-                count={this.state.count}
-                onIncrement={() => {
-                    this.setState({count: this.state.count + 1});
-                }}
-            />
+            <div>
+                <Hello
+                    label="TypeScript"
+                    count={this.state.count}
+                    onIncrement={() => {
+                        this.setState({count: this.state.count + 1});
+                    }}
+                />
+                <Link page="https://yonglinwang.ca">My Website</Link>
+            </div>
         );
     }
 }
