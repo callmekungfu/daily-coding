@@ -61,15 +61,16 @@ module.exports = {
   },
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  // moduleDirectories: [
-  //   "node_modules"
-  // ],
+  moduleDirectories: [
+    "node_modules",
+  ],
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
     "ts",
     "tsx",
-    "js"
+    "js",
+    "jsx"
   ],
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
@@ -161,7 +162,8 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest"
+    "^.+\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.jsx?$": "babel-jest",
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

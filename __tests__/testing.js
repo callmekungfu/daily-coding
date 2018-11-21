@@ -1,4 +1,4 @@
-const functions = require('../src/experimental');
+import functions from '../src/experimental';
 
 test('Adding Numbers Test, 100 runs', () => {
     for (let i = 0; i < 100; i++) {
