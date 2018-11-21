@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".hello {\r\n    color: red;\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif\r\n}\r\n\r\n.test {\r\n    background: pink;\r\n}", ""]);
+exports.push([module.i, ".hello {\n  color: red;\n  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.test {\n  background: pink;\n}\n.test .test-inner {\n  color: black;\n  font-family: 'comic sans';\n}\n", ""]);
 
 // exports
 
@@ -23712,12 +23712,14 @@ module.exports = function (css) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 exports.Hello = function (props) {
-    return React.createElement("h1", { className: "hello" },
-        "Hello from ",
-        props.compiler,
-        " and ",
-        props.framework,
-        "!!");
+    var label = props.label, count = props.count, onIncrement = props.onIncrement;
+    var handleIncrement = function () { onIncrement(); };
+    return (React.createElement("div", null,
+        React.createElement("span", null,
+            label,
+            ": ",
+            count),
+        React.createElement("button", { type: "button", onClick: handleIncrement }, "Increment")));
 };
 
 
@@ -23737,7 +23739,10 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 var hello_1 = __webpack_require__(/*! ./components/hello */ "./src/components/hello.tsx");
 __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
-ReactDOM.render(React.createElement(hello_1.Hello, { compiler: "TypeScript", framework: "React" }), document.getElementById('example'));
+var counter = 0;
+ReactDOM.render(React.createElement(hello_1.Hello, { label: "TypeScript", count: counter, onIncrement: function () {
+        counter++;
+    } }), document.getElementById('example'));
 
 
 /***/ }),

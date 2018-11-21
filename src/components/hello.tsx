@@ -1,11 +1,20 @@
 import * as React from "react";
 
 export interface IHelloProps {
-    compiler: string;
-    framework: string;
+    label: string;
+    count: number;
+    onIncrement: () => any;
 }
 
-export const Hello = (props: IHelloProps) =>
-<h1 className="hello">
-    Hello from {props.compiler} and {props.framework}!!
-</h1>;
+export const Hello: React.SFC<IHelloProps> = (props) => {
+    const { label, count, onIncrement } = props;
+    const handleIncrement = () => { onIncrement(); };
+    return (
+        <div>
+            <span>{label}: {count}</span>
+            <button type="button" onClick={handleIncrement}>
+                {`Increment`}
+            </button>
+        </div>
+    );
+};

@@ -20,7 +20,9 @@
                 "timeEnd",
                 "trace"
             ]
-        }
+        },
+        "member-access": [true, "no-public"],
+        "quotemark": [true, "single", "jsx-double"]
     },
     "rulesDirectory": []
 }

@@ -2,12 +2,29 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import {
-    Hello
+    Hello,
 } from './components/hello';
 
-import './styles/style.css'
+import './styles/style.css';
+
+class Main extends React.Component<{}, {count: number}> {
+    state = {
+        count: 0,
+    };
+    render() {
+        return (
+            <Hello
+                label="TypeScript"
+                count={this.state.count}
+                onIncrement={() => {
+                    this.setState({count: this.state.count + 1});
+                }}
+            />
+        );
+    }
+}
 
 ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
-    document.getElementById('example')
-)
+    <Main />,
+    document.getElementById('example'),
+);
