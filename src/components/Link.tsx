@@ -24,13 +24,11 @@ export class Link extends React.Component<ILinkProps, IState> {
             class: STATUS.HOVERED,
         });
     }
-
     handleMouseLeave = () => {
         this.setState({
             class: STATUS.NORMAL,
         });
     }
-
     render() {
         const { handleMouseEnter, handleMouseLeave } = this;
         const { page } = this.props;
