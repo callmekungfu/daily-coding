@@ -1,11 +1,18 @@
 # Cracking the Coding Interview 6th Edition
-# Chapter 1 - Arrays and Strings
+# Chapter 1 - Arrays and Strings. Page 88
 # Question 1.1
-# Solved by Yong Lin Wang 
+# Solved by Yong Lin Wang
+
+"""
+    Implement an algorithm to determine if a string has all unique characters. 
+    What if you cannot use additional data structures?
+""" 
 
 def is_unique_sets(s):
     """
-        The most straightforward approach in 
+        The most straightforward approach in python is to utilize the power of sets.
+        Sets are implementations of hash table that allows fast read/write operations
+        In this case we will split the string into a list then convert into
     """
     s_splitted = s.split()
     return len(s_splitted) == len(set(s_splitted))
