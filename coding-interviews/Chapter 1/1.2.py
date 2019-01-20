@@ -8,6 +8,13 @@
 """
 
 def check_permutation(str1, str2):
+    """
+        If two strings are permutation to one another, they should have the same
+        characters. This solution evaluates the sum of the orders of the strings
+        if they are the same then they are permutation to one another, otherwise,
+        they are not and I am a fucking retard that cant get any shit done properly
+        i am such a failure in life that I cant do anything right. :(
+    """
     ord1 = 0
     ord2 = 0
     for char in str1:
