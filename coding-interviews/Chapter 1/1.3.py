@@ -1,6 +1,6 @@
 # Cracking the Coding Interview 6th Edition
 # Chapter 1 - Arrays and Strings. Page 88
-# Question 1.2 URLify
+# Question 1.3 URLify
 # Solved by Yong Lin Wang
 
 """
@@ -9,3 +9,7 @@
 
 def urlify(url):
     return url.replace(' ','%20')
+
+text = input("Input the text that you would like to stringify").strip()
+
+print(urlify(text))
