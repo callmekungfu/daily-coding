@@ -31,6 +31,7 @@ def palindrom_builder(text):
         raise ValueError("String Provided is Not Palindromable.")
     
     characters = list(text)
+    space = characters.count(' ') > 0
     characters = list(filter((' ').__ne__, characters))
 
     single_char = ''
@@ -42,18 +43,25 @@ def palindrom_builder(text):
     
     shuffle(characters)
     length = len(characters) // 2
-    i = 0
 
     buffer = ''
 
     while len(characters) > 0:
-        if length // 2 == i:
-            buffer += single_char
-        else:
-            buffer += characters[0]
-            characters = list(filter((characters[0]).__ne__, characters))
-        i += 1
-    print(buffer)
-    
+        buffer += characters[0]
+        characters = list(filter((characters[0]).__ne__, characters))
 
-palindrom_builder(input("Your Text: ").strip())
+    buffer_reversed = buffer[::-1]
+
+    buffer += single_char
+    if space:
+        buffer += ' '
+    buffer += buffer_reversed
+    
+    return buffer
+    
+target = input("Your Text: ").strip()
+
+print(str(palindrome_detector(target)) + ',', 'Examples:', palindrom_builder(target) + ',', palindrom_builder(target), 'and more.')
+
+
+
