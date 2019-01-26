@@ -8,7 +8,6 @@
 """
 
 def one_edit_away(a,b):
-    # Insert Character Check
     if len(a) > len(b):
         longer = list(a)
         shorter = list(b)
