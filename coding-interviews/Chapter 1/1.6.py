@@ -32,7 +32,7 @@ def compress_string(original):
 class MyTest(unittest.TestCase):
     def test(self):
         self.assertEqual(compress_string("aabcccccaaa"), "a2b1c5a3")
-        print("Test Completed with " + str(NUM_OF_TESTS) + " attempts.")
+        print("Test Completed Successfully")
 
         
         
