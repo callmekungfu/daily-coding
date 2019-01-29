@@ -4,7 +4,6 @@
 # Solved by Yong Lin Wang
 
 import unittest
-import random
 
 """
     Approach 1
@@ -33,8 +32,5 @@ class MyTest(unittest.TestCase):
     def test(self):
         self.assertEqual(compress_string("aabcccccaaa"), "a2b1c5a3")
         print("Test Completed Successfully")
-
-        
-        
 
 MyTest().test()
